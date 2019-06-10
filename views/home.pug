@@ -1,0 +1,124 @@
+doctype html
+html
+  head
+    title ScriptFlip
+    link(rel="shortcut icon" type="image/png" href="/photos/trianglify.png")
+    link(href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah|News+Cycle', rel='stylesheet', type='text/css')
+    link(href="https://fonts.googleapis.com/css?family=Raleway&display=swap", rel="stylesheet")
+    link(type='text/css' href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel='stylesheet', href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css')
+ 
+
+    link(href="/dist/style.css")
+    style 
+      include login.scss
+      include style.css
+  
+
+     
+  body
+
+
+
+    .hi
+      .demo-layout-waterfall.mdl-layout.mdl-js-layout
+        header.mdl-layout__header.mdl-layout__header--waterfall
+          // Top row, always visible
+          .mdl-layout__header-row
+            // Title
+            span.mdl-layout-title ScriptFlip
+            .mdl-layout-spacer
+          // Bottom row, not visible on scroll
+          .mdl-layout__header-row
+            .mdl-layout-spacer
+            // Navigation
+            nav.mdl-navigation
+              a.mdl-navigation__link(href="/writing") Home
+              a.mdl-navigation__link(href="/add") Share your Writing
+              if user
+                a.mdl-navigation__link(href="/logout") Logout
+                a.mdl-navigation__link(href="/account") Your Account
+                a.mdl-navigation__link(href="/hearts") 
+                  i.material-icons.mdc-icon-button__icon favorite_border
+                a.mdl-navigation__link(href="") 
+              else
+                
+                a.mdl-navigation__link(href="/login") Login
+                a.mdl-navigation__link(href="/register")  Register
+                a.mdl-navigation__link(href="") 
+
+        .mdl-layout__drawer
+          span.mdl-layout-title  ScriptFlip
+          nav.mdl-navigation
+            
+            a.mdl-navigation__link(href="/writing") Home
+            a.mdl-navigation__link(href="/add") Share your Writing
+            
+          if user
+            nav.mdl-navigation
+              a.mdl-navigation__link(href="/logout") Logout
+              a.mdl-navigation__link(href="/account") Your Account
+              a.mdl-navigation__link(href="/hearts") 
+                i.material-icons.mdc-icon-button__icon favorite_border
+              a.mdl-navigation__link(href="") 
+          else
+            nav.mdl-navigation
+              a.mdl-navigation__link(href="/login") Login
+              a.mdl-navigation__link(href="/register")  Register
+        main.mdl-layout__content
+          .page-content
+            block messages
+              if locals.flashes
+                //- pre= h.dump(locals)
+                .inner
+                  .flash-messages
+                    - const categories = Object.keys(locals.flashes)
+                    each category in categories
+                      each message in flashes[category]
+                        .flash(class=`flash--${category}`)
+                          .mdl-button.mdl-js-button.mdl-button--raised.flashBtn
+                            p.flash__text!= message
+                            button.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--accent.flash__remove(onClick="this.parentElement.remove()") &times;
+                              i.material-icons clear
+            block content
+
+    
+            block scripts
+              script(src="/dist/index.js")
+              script(defer='', src='https://code.getmdl.io/1.3.0/material.min.js')
+              script(src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js")
+            script.
+              let link = document.querySelectorAll('.mdl-navigation__link')
+              link.addEventListener('mouseover', function(e){
+                e.target.style.color="pink"
+              })
+              //- for(let a of link){
+              //-   console.log(a.innerHTML)
+              //- }
+              //- console.log(link[0].innerHTML)
+              
+
+          
+  //- script.
+
+  //-   //const color = [A8E6CF,DCEDC1,FFD3B6,ffaaa5,ff8b94]
+  //-   let item = document.querySelector('.item').innerHTML
+    //- item.addEventListener("mouseover", function(){console.log(item)})
+    //- const header = document.querySelector('h')
+    //- header.addEventListener("click", ()=>{
+    //- console.log(header)
+    //- const color = [#A8E6CF,#DCEDC1,#FFD3B6,#ffaaa5,#ff8b94]
+    //- header.style.backgroundColor = color[Math.floor(Math.random() * color.length)]
+
+    //- })
+    
+
+  //- script.
+  //-  import {MDCTopAppBar} from '@material/top-app-bar/index'
+  //-   const topAppBarElement = document.querySelector('.mdc-top-app-bar')
+  //-   const topAppBar = new MDCTopAppBar(topAppBarElement)
+  //-   const button = document.querySelector(‘.foo-button’)
+  //-   mdc.ripple.MDCRipple.attachTo(button)
+  //-   (src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js")
+   

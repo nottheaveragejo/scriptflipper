@@ -1,0 +1,405 @@
+
+/* navbar */
+.mdl-navigation__link:hover{
+    color:#ffaaa5;
+}
+.mdl-layout-title{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 38px;
+}
+header.mdl-layout__header.mdl-layout__header--waterfall{
+    background: url('/photos/trianglify.png') no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
+}
+
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+    padding-right: 0;
+   
+    margin-bottom: 100px;}
+body{
+    background-color:#F6F6F6;
+}
+a{
+    text-decoration: none;
+    color:black;
+    font-family: 'News Cycle', sans-serif;
+}
+a:hover{
+    color: #ff8b94;
+}
+.navbar-nav{
+    border-top: 3px solid #6E6B70;
+    border-bottom: 3px solid #6E6B70;
+    background-color:white;
+    height: 110px;
+    display: flex;
+    justify-content: space-around;
+    list-style-type:none;
+    align-items: center;
+    font-size: 20px;
+   
+    
+}
+
+/* .writingPage  styling*/
+.writingPage{
+    background-color:#ff8b94;
+    font-size: 12px;
+    color:white;
+}
+
+.writingPage:hover {
+    background-color:#ffaaa5;
+
+}
+
+/* writing card styling */
+.heart{
+    -webkit-appearance: none;
+    box-shadow: none;
+    flex-shrink: 2;
+}
+.userForm{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.writing{
+    width: 80%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+h2.demo-card__title.mdc-typography{
+    text-align: center;
+}
+.demo-card__secondary{
+    padding: 10px;
+}
+
+h2.demo-card__title{
+    font-size: 20px;
+}
+
+#editBtn{
+    background-color: white;
+    color:#ffaaa5;
+    border: 2px solid #ffaaa5;
+}
+#editBtn:hover{
+    background-color:#ff8b94;
+}
+/* single writing styling */
+
+
+.singleWriting{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.innerWriting{
+    -webkit-box-shadow: 4px -1px 16px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px -1px 16px -8px rgba(0,0,0,0.75); 
+    box-shadow: 4px -1px 16px -8px rgba(0,0,0,0.75);
+    background-color:white;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.authorName{
+    justify-self:  flex-start ;
+    font-size: 17px;
+    padding-left: 10px;
+}
+.innerWriting h{
+    font-size: 25px;
+    font-weight: 700;
+    align-self: center;
+    padding-top: 10px;
+}
+.innerWriting p{
+    font-size: 15px;
+    color: #292929;
+}
+.desc{
+    width: 700px;
+}
+
+.time{
+    color:	#696969;
+}	
+
+
+/* h2{
+    text-align: center;
+    /* font-family: 'Gloria Hallelujah', cursive; */
+
+
+.reviewForm{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:90%;
+    align-items: center;
+}
+
+.reviewForm form{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.reviewForm form textarea{
+    width: 400px;
+    height:200px;
+    background: white;
+}
+
+.reviewBtn{
+    background: #ffd3b6;
+    color:white;
+}
+
+.reviewBtn:hover{
+    background: #ffaaa5;
+    border:3px solid #ffd3b6;
+}
+
+/* single writing reviews */
+
+.review{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.reviewHeader{
+display: flex;
+}
+
+.reviewText{
+    justify-self: flex-end;
+}
+
+#name{
+    color:#a8e6cf;
+}
+
+.reviewbtn{
+    margin-left: 50px;
+}
+
+
+/* login form styling */
+
+
+.loginHeader{
+    text-align: center;  
+    font-weight: 700;
+    font-size: 25px;
+}
+
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+form{
+    background-color:white;
+    -webkit-box-shadow: 4px -1px 16px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px -1px 16px -8px rgba(0,0,0,0.75); 
+    box-shadow: 4px -1px 16px -8px rgba(0,0,0,0.75);
+    height: auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+
+}
+.label{
+    align-self: flex-start;
+    font-size: 18px;
+    padding-left: 100px;
+}
+
+
+/* .form form input{
+    align-self: center;
+    justify-self: center;
+    width: 400px;
+    height: 20px;
+} */
+.form form textarea{
+    align-self: center;
+    width: 400px;
+    height: 100px;
+  
+}
+
+.mdc-card.demo-card{
+    border-left: 5px solid #ffd3b6;
+    width: 90%;
+    padding-left: 30px;
+}
+
+
+
+
+
+  /* register redirect */
+  .register{
+    display: flex;
+    justify-content: center;
+  }
+  .registerRedirect{
+      height: auto;
+      width: 500px;
+      display: flex;
+      /* flex-direction: column; */
+      /* align-content: baseline; */ 
+      background-color:	#a8e6cf ;
+      justify-content: flex-end;
+  }
+
+#registerArea{
+    color: whitesmoke;
+    padding-left: 10px;
+    flex-basis: 1;
+    padding-right: 100px;
+
+}
+
+
+ /* register form */
+
+ #register{
+    -webkit-box-shadow: 4px -1px 16px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px -1px 16px -8px rgba(0,0,0,0.75); 
+    box-shadow: 4px -1px 16px -8px rgba(0,0,0,0.75);
+    height: 650px;
+    width: 500px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+ }
+ .labelR{
+     align-self: flex-start;
+     padding-left: 100px;
+     font-family: 'News Cycle', sans-serif;
+     font-size: 16px;
+    /* margin-right: 100px; */
+ }
+.button{
+ width: 80px;
+}
+
+
+/* writing styling */
+
+
+.mdc-card.demo-card{
+    margin-top: 30px;
+    
+    
+}
+h3.demo-card__subtitle.mdc-typography.mdc-typography--subtitle2, .demo-card__secondary.mdc-typography.mdc-typography--body2{
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+
+.userForm{
+    /* border: 1px solid red; */
+    display: flex;
+    padding-left: 70%;
+}
+
+
+/* edit and add writing styling */
+input.writing{
+   border: 1px solid black;
+}
+
+.formwritingAdd{
+    display: grid;
+    justify-content: center;
+    width: 900px;
+}
+.formwritingAdd form{
+    width: 800px;
+    height: 500px;
+    display: flex;
+}
+
+
+input.writing{
+    height: 60px;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border:1px solid#DCDCDC;
+}
+textarea.writing{
+    padding-top: 10px;
+    height: 200px;
+    font-size: 18px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border:1px solid#DCDCDC;
+}
+.mdc-card.demo-card{
+    width: 110%;
+}
+
+.writingFormbtn{
+    color:white;
+    background-color: 	#a8e6cf;
+}
+
+.writingFormbtn:hover{
+    background-color:#dcedc1;
+}
+/* flash messages */
+.flash{
+    display: flex;
+    justify-content: center;
+}
+.flashBtn{
+    background-color: #dcedc1;
+    color: white;
+    display:flex;
+    width: 90%;
+    align-items: center;
+    height: 60px;
+    
+}
+
+.flashBtn:hover{
+    background-color:#a8e6cf;
+}
+p.flash__text{
+    flex-grow: 4;
+}
+
+.flash__remove{
+    color:#a8e6cf;
+}

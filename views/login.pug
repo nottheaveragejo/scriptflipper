@@ -1,0 +1,19 @@
+extends home
+include mixins/_loginForm
+block content   
+    +loginForm
+    .register
+        .registerRedirect
+            h4#registerArea Don't have an account?
+            .mdc-card__actions
+                .mdc-card__action-buttons
+                a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.writingPage(href="/register") Sign Up
+            //- button.registerRedirectButton
+            //-     span.mdc-button__label(type="submit" href="/register") Sign Up
+
+//- include mixins/_loginForm
+
+//- block content
+//-     h2 Login here!
+//-         +loginForm
+  

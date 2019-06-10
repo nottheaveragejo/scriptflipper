@@ -1,0 +1,39 @@
+extends home
+block content
+    h4.loginHeader= title
+        .form
+            form(action="/register" method="POST")
+                h4.label Name
+                .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                    input.mdl-textfield__input(type="text" name="name")
+                    label.mdl-textfield__label(for="name") e.g. Amy
+                h4.label Email
+                .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                    input.mdl-textfield__input(type="email" name="email")
+                    label.mdl-textfield__label(for="email") e.g. amydunne@example.com
+                h4.label Password
+                .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                    input.mdl-textfield__input(type="password" name="password") 
+                    label.mdl-textfield__label Password123
+                h4.label Confirm Password
+                .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                    input.mdl-textfield__input(type="password" name="password-confirm") 
+                    label.mdl-textfield__label Password123
+                .mdc-card__actions
+                    .mdc-card__action-buttons
+                    input.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.writingPage(type="submit" value="Register")
+                //- button.mdc-button
+                //-     span.mdc-button__label(type="submit") Register  
+            
+
+    //- .form
+    //-     form(action="/register" method="POST")
+    //-         label(for="name") Name
+    //-         input(type="text" name="name")
+    //-         label(for="email") Email
+    //-         input(type="email" name="email")
+    //-         label(for="password") Password
+    //-         input(type="password" name="password") 
+    //-         label(for="password-confirm")  Confirm Password
+    //-         input(type="password" name="password-confirm") 
+    //-         input(type="submit" value="Register here!" class="button")

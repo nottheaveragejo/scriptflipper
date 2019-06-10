@@ -1,0 +1,12 @@
+extends home
+include mixins/_writingCard
+include mixins/_writingForm
+
+block content
+    .writingWrapper
+        .writing
+            each writing in writings
+                +writingCard(writing)
+    
+
+            

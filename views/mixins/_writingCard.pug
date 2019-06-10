@@ -1,0 +1,24 @@
+mixin writingCard(writing = {})
+
+    
+    .mdc-card.demo-card
+        .mdc-card__primary-action.demo-card__primary-action(tabindex='0')
+            .demo-card__primary
+            h2.demo-card__title.mdc-typography  #{writing.title}
+            .demo-card__secondary.mdc-typography.mdc-typography--body2= writing.description.split(' ').slice(0,50).join(' ')
+        .userForm
+            if user && writing.author.equals(user._id)
+                .mdc-card__actions
+                    .mdc-card__action-buttons
+                    a(href=`/writings/${writing._id}/edit`).mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect#editBtn Edit 
+            if user  
+                form.heart(method="POST" action=`/api/writings/${writing._id}/heart`)  
+                
+                    button.mdc-icon-button(type="submit")
+                        i.material-icons.mdc-icon-button__icon favorite_border
+            .mdc-card__actions
+                .mdc-card__action-buttons
+                a(href=`/writing/${writing._id}`).mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.writingPage Read
+            
+
+

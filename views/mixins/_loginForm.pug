@@ -1,0 +1,20 @@
+mixin loginForm
+    h4.loginHeader Login Here
+    .form
+        form(action="/login" method="POST")
+            h4.label Email
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                input.mdl-textfield__input(name="email" type="email" required) 
+                label.mdl-textfield__label.login(for="email") e.g. Amy
+            h4.label Password
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                input.mdl-textfield__input(name="password" type="password" required) 
+                label.mdl-textfield__label(for="password") e.g. goneGirl
+            .mdc-card__actions
+                    .mdc-card__action-buttons
+                    input.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.writingPage(type="submit" value="Login")
+            //- .mdc-card__actions
+            //-     .mdc-card__action-buttons
+            //-     input.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect(type="submit" value="login")
+                //- input(type="submit"  value="login")
+                

@@ -1,0 +1,42 @@
+
+@import "@material/card/mdc-card";
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+@import "@material/top-app-bar/mdc-top-app-bar";
+
+.mdc-top-app-bar-fill-color{
+  color:pink;
+}
+
+//Login Form
+
+
+.mdc-text-field username {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+}
+// .head{
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     font-size: 40px;
+//     height:100px;
+//     font-family: 'Gloria Hallelujah', cursive;
+//     background: url('/photos/trianglify.png') no-repeat;
+//     background-size: 1400px 100px;
+// }
+
+p{
+  padding: 16px;
+  text-align: center;
+}
+
+.mdc-card__media--square{
+  height:400px;
+  width:400px;
+  display: flex;
+  flex-direction: column;
+
+}
+

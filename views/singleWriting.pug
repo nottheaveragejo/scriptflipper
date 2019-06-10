@@ -1,0 +1,33 @@
+extends home
+include mixins/_review
+
+block content 
+    .singleWriting
+        .innerWriting
+            h= writing.title
+            h2.authorName by #{writing.author.name}
+            p= writing.description
+            .mdc-card__actions
+                        .mdc-card__action-buttons
+                        a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.writingPage(href="/writing") Go back
+        if user
+            .reviewForm
+                form(action=`/reviews/${writing._id}` method="POST")
+                    .mdl-textfield.mdl-js-textfield
+                        textarea.mdl-textfield__input(name="text" placeholder="What did you think?")
+                    .mdc-card__actions.reviewbtn
+                        .mdc-card__action-buttons
+                        input.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.reviewBtn(type="submit" value="Submit Review")
+                    //- input.button(type="submit" value="Submit Review")
+    
+ 
+        if writing.reviews
+            each review in writing.reviews
+            
+                .review
+                    .reviewHeader
+                        p#name= review.author.name
+                        p.time #{h.moment(review.created).fromNow()}
+                    .reviewText
+                    p= review.text
+                    

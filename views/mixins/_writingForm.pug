@@ -1,0 +1,9 @@
+mixin writingForm(writing = {})
+    .formwritingAdd
+        form(action=`/add/${writing._id || ''}` method="POST" )
+            input.writing(type="text" name="title" value=writing.title placeholder="add a title")
+            textarea.writing(name="description" placeholder="writing goes here")= writing.description  
+            .mdc-card__actions
+                .mdc-card__action-buttons
+                input.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.writingFormbtn(type="submit" value="Submit")
+            

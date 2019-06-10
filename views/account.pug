@@ -1,0 +1,27 @@
+extends home
+block content
+    h4.loginHeader=title
+
+    .form
+        form(action="/account" method="POST")
+            h4.label Name
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                input.mdl-textfield__input(type="text" name="name") 
+                label.mdl-textfield__label update name
+            h4.label Email
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                input.mdl-textfield__input(type="email" name="email") 
+                label.mdl-textfield__label update email
+            //- .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            //-     input.mdl-textfield__input(type="email" name="email") 
+            //-     label.mdl-textfield__label amyelliot@example.com
+            //- //- h4.labelR Email
+            //- //- .mdc-text-field
+            //- //-     input.mdc-text-field__input(type="email" name="email")
+            //- //-     .mdc-line-ripple
+            //- //-     label.mdc-floating-label(for="name") update your email
+            //- //- input(type="submit" value="Update your account" class="button")
+            .mdc-card__actions
+                .mdc-card__action-buttons
+                input.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.writingPage(type="submit" value="Update")
+        
