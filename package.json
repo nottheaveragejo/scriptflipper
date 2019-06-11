@@ -1,9 +1,12 @@
 {
-  "name": "scriptflipnode",
+  "name": "scriptflip",
   "private": true,
   "version": "1.0.0",
   "engines": {
     "node": ">= 7.6.0"
+  },
+  "now":{
+    "dotenv":"variables.env.now"
   },
   "description": "",
   "main": "index.js",
