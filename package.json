@@ -11,7 +11,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "start": "node ./start.js"
   },
   "author": "Lisa Jo",
   "license": "ISC",

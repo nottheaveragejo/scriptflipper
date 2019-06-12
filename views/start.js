@@ -12,18 +12,8 @@ mongoose.connection.on('error', (err) => {
   console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
 });
 
-// READY?! Let's go!
-
-
- //import the model
- //require('./models/Writing');
-
 
 
 // Start our app!
 const app = require('./app');
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-// app.set('port', process.env.PORT || 3000);
-// const server = app.listen(app.get('port'), () => {
-//   console.log(`Express running → PORT ${server.address().port}`);
-// });
